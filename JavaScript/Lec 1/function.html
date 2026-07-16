@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Click the button below to perform an event</p>
+    <h1 id="sub">Hiii!!</h1>
+    <button id="button">Click me</button><br />
+    <button id="double">Double Click me</button>
+    <div id="hover">Hover on me</div>
+
+    <script>
+      const button = document.getElementById("button");
+      /*
+      button.onclick = function () {
+        alert("Button Clicked!");
+      };
+      */
+      function handleClick() {
+        alert("Button Clicked!");
+      }
+      button.addEventListener("click", handleClick);
+
+      var div = document.getElementById("hover");
+      div.style.height = "300px";
+      div.style.width = "300px";
+      div.style.backgroundColor = "grey";
+      div.style.fontSize = "30px";
+
+      div.onmouseover = function () {
+        div.style.backgroundColor = "skyblue";
+        div.style.color = "Red";
+        div.style.height = "500px";
+        div.style.width = "500px";
+        div.style.fontSize = "70px";
+        div.textContent = "Hover out me";
+      };
+
+      div.onmouseout = function () {
+        div.style.backgroundColor = "grey";
+        div.style.color = "Black";
+        div.style.height = "300px";
+        div.style.width = "300px";
+        div.style.fontSize = "30px";
+        div.textContent = "Hover on me";
+      };
+
+      const sub = document.getElementById("sub");
+      const double = document.getElementById("double");
+
+      double.ondblclick = function () {
+        sub.style.color = "red";
+        sub.style.fontSize = "30pt";
+      };
+    </script>
+  </body>
+</html>

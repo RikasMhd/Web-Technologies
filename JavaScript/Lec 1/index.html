@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box1">
+        <h1 id="msg">Welcome to JS</h1>
+        <p id="demo"></p>
+    </div>
+    <div id="box2">
+        <label>Username: </label>
+        <input type="text" id="name" placeeholder="Enter your Name" />
+        <button id="button" type="submit" name="" submit>Submit</button>
+        <p id="greet"></p>
+    </div>
+    <img id="img" src="download.jpg" />
+
+    <script>
+        document.getElementById("msg").innerHTML = "Hello js!";
+        document.getElementById("demo").innerHTML = "Hello World!";
+        /*
+        document.getElementById("demo").onclick = function () {
+        document.getElementById("demo").textContent ="Welcome To the DOM Examples geElementById"
+        }*/
+
+        document.getElementById("demo").textContent =
+        "Welcome To the DOM Examples geElementById";
+        document.getElementById("box1").style.backgroundColor = "grey";
+
+        document.getElementById("button").onclick = function () {
+            var uname = document.getElementById("name").value;
+            console.log("Hii ",uname);
+        };
+        console.log("Rikas");
+
+        document.getElementById("img").src = "download 1.jpg";
+
+        
+    </script>
+  </body>
+</html>
